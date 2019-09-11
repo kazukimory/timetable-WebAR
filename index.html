@@ -1,0 +1,36 @@
+<!doctype HTML>
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
+</head>
+
+<body>
+    <a-scene embedded arjs="debugUIEnabled: false" vr-mode-ui="enabled: false">
+        <a-assets>
+            <!-- 表示する画像 -->
+            <img id="table1" src="img/timetable1.png">
+            <img id="table2" src="img/timetable2.png">
+            <img id="table3" src="img/timetable3.png">
+            <img id="table4" src="img/timetable4.png">
+
+          
+        </a-assets>
+        
+        <a-marker preset="hiro">
+            <!-- 赤い立方体を表示 -->
+            <a-entity>
+                <!-- idで画像を指定。x軸回りで-90度回転 -->
+                <a-image src="#table1" position="0 -1 -3" width="4" height="3" rotation="-90 0 0"></a-image>
+                <a-image src="#table2" position="0 -1 0" width="4" height="3" rotation="-90 0 0"></a-image>
+                <!-- <a-image src="#table3" position="0 -5 0" width="4" height="3" rotation="-90 0 0"></a-image>
+                <a-image src="#table4" position="0 -5 0" width="4" height="3" rotation="-90 0 0"></a-image> -->
+               
+            </a-entity>
+        </a-marker>
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+
+</html>
